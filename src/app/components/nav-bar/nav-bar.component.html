@@ -1,0 +1,21 @@
+<div class= "page-top" style="width: 100%; height: 20px; background-color: #9932CC"></div>
+
+<nav class="navbar navbar-default navbar-light bg-light">
+  <div class = "container">
+    <div class ="navbar-header">
+      <a class = "navbar-brand pointer" routerLink="/home">East Innovation</a>
+    </div>
+    <div id="navbar">
+    <ul class = "nva nvabar-nav navbar-right">
+      <li *ngIf="!loggedIn">
+        <a mat-button routerLink="/myAccount">My Account</a>
+      </li>
+      <li *ngIf="loggedIn">
+        <a mat-button routerLink="/myProfile">Profile</a>
+      </li>
+      <li *ngIf="loggedIn"><a mat-button (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
