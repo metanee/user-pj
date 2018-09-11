@@ -59,7 +59,7 @@ export class MyAccountComponent implements OnInit {
       error => {
         console.log(error.text());
         let errorMessage = error.text();
-        if(errorMessage === 'UsernameExists')this.usernameExists= true;
+        if(errorMessage === 'usernameExists')this.usernameExists= true;
         if(errorMessage === 'emailExists')this.emailExists= true;
 
       }
@@ -74,11 +74,12 @@ export class MyAccountComponent implements OnInit {
       res => {
         console.log(res);
         this.emailSent = true;
+        this.forgetPasswordEmailSent = true;
       },
       error => {
         console.log(error.text());
         let errorMessage = error.text();
-        if(errorMessage === 'emailExists')this.emailExists= true;
+        if(errorMessage === 'Email not found')this.emailExists= true;
       }
     );
   }

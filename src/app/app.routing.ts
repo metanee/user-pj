@@ -2,6 +2,7 @@ import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
 import {MyAccountComponent} from './components/my-account/my-account.component';
+import {MyProfileComponent} from './components/my-profile/my-profile.component';
 const appRoutes: Routes = [
   {
     path: '',
@@ -15,6 +16,10 @@ const appRoutes: Routes = [
   {
     path: 'myAccount',
     component : MyAccountComponent
+  },
+  {
+    path: 'myProfile',
+    component: MyProfileComponent
   }
 ];
 

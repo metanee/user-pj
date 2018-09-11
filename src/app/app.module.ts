@@ -11,12 +11,15 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { MyAccountComponent } from './components/my-account/my-account.component';
 import {LoginService} from './services/service-login/login.service';
 import {UserService} from './services/service-user/user.service';
+import {UploadImageService} from './services/upload-image/upload-image.service';
+import { MyProfileComponent } from './components/my-profile/my-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavBarComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    MyProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import {UserService} from './services/service-user/user.service';
   ],
   providers: [
     LoginService,
-    UserService
+    UserService,
+    UploadImageService
   ],
   bootstrap: [AppComponent]
 })
